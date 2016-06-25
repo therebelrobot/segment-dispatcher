@@ -1,11 +1,60 @@
-var express = require('express')
+var path = require('path')
 
+// external dependencies
+var express = require('express')
+require('colors')
+var bodyParser = require('body-parser')
+var session = require('express-session')
+var flash = require('express-flash')
+var expressValidator = require('express-validator')
+var sass = require('node-sass-middleware')
+var browserify = require('browserify-middleware')
+var lusca = require('lusca')
+
+// local dependencies
+var clientCtrl = require('./client/client.ctrl')
+var apiCtrl = require('./api/consume.ctrl')
+
+// instantiate server
 var app = express()
 
-app.get('/', function(req,res,next){
-  res.send('Hello World')
-})
+// App definitions
+app.set('port', process.env.PORT || 5465)
+app.set('views', path.join(__dirname, 'client'))
+app.set('view engine', 'pug')
 
-app.listen(8000, function(){
-  console.log('Listening on port', 8000)
+// Middleware Instantiation
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(expressValidator())
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  secret: '1234567890'
+}))
+app.use(flash())
+app.use(lusca({
+  csrf: true,
+  xframe: 'SAMEORIGIN',
+  xssProtection: true
+}))
+
+// Actual routes
+app.get('/', clientCtrl.get)
+app.post('/', apiCtrl.post)
+
+// preprocess/serve public assets
+app.get('/js/bundle.js', browserify('./client/public/js/main.js'))
+app.use(sass({
+  src: path.join(__dirname, 'client/public'),
+  dest: path.join(__dirname, 'client/public'),
+  debug: true,
+  sourceMap: true,
+  outputStyle: 'expanded'
+}))
+app.use(express.static(path.join(__dirname, 'client/public'), { maxAge: 31557600000 }))
+
+// start server
+app.listen(app.get('port'), function () {
+  console.log('[Segment Dispatcher]'.yellow + ' Server listening on port', app.get('port'))
 })
