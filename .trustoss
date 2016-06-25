@@ -1,0 +1,21 @@
+{
+ "trustoss": "0.1.0",
+ "name": "Segment Dispatcher",
+ "version": "0.1.0",
+ "repository": "https://github.com/therebelrobot/segment-dispatcher.git",
+ "status": "alpha",
+ "contact": "Trent Oswald (@therebelrobot) <trentoswald@therebelrobot.com>",
+ "homepage": "http://docker.therebelrobot.com:8000",
+ "docroot": "docs/",
+ "readme": "TrustOSS v0.1",
+ "readme_location": "../README.md",
+ "contributing": "Contribute.md",
+ "contributing_location": "CONTRIBUTING.md",
+ "license": "ISC",
+ "license_location": "LICENSE.md",
+ "changelog": "nodejs",
+ "changelog_location": "CHANGELOG.md",
+ "coc": "Contributor Covenant"
+ "coc_location": "CODEOFCONDUCT.md",
+ "last_updated": "2016-06-25T18:46:25.878Z"
+}

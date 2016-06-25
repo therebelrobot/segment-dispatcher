@@ -1,4 +1,8 @@
-Copyright (c) 2016, Trent Oswald
+[![tldrlegal-ISC](https://img.shields.io/badge/tldrlegal-ISC-red.svg)](https://tldrlegal.com/license/-isc-license)
+
+ISC License (ISC)
+
+Copyright (c) 2016, Trent Oswald (@therebelrobot) <trentoswald@therebelrobot.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

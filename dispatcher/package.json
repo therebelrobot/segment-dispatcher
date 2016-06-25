@@ -1,0 +1,34 @@
+{
+  "name": "segment-dispatcher",
+  "version": "1.0.0",
+  "description": "API and client of Segment Dispatcher",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "tap ./*.tap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/therebelrobot/segment-dispatcher.git"
+  },
+  "author": "Trent Oswald <trentoswald@therebelrobot.com> (@therebelrobot)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/therebelrobot/segment-dispatcher/issues"
+  },
+  "homepage": "https://github.com/therebelrobot/segment-dispatcher#readme",
+  "dependencies": {
+    "eventemitter2": "^1.0.5",
+    "express": "^4.14.0",
+    "lodash": "^4.13.1",
+    "mithril": "^0.2.5",
+    "moment": "^2.13.0",
+    "request": "^2.72.0",
+    "superagent": "^2.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "standard": "^7.1.2",
+    "tap": "^5.8.0"
+  }
+}
