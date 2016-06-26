@@ -4,12 +4,9 @@ var path = require('path')
 var express = require('express')
 require('colors')
 var bodyParser = require('body-parser')
-var session = require('express-session')
-var flash = require('express-flash')
 var expressValidator = require('express-validator')
 var sass = require('node-sass-middleware')
 var browserify = require('browserify-middleware')
-var lusca = require('lusca')
 
 // local dependencies
 var clientCtrl = require('./client/client.ctrl')
@@ -27,17 +24,6 @@ app.set('view engine', 'pug')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(expressValidator())
-app.use(session({
-  resave: true,
-  saveUninitialized: true,
-  secret: '1234567890'
-}))
-app.use(flash())
-app.use(lusca({
-  csrf: true,
-  xframe: 'SAMEORIGIN',
-  xssProtection: true
-}))
 
 // Actual routes
 app.get('/', clientCtrl.get)

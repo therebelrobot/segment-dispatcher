@@ -21,6 +21,7 @@
     "body-parser": "^1.15.2",
     "browserify-middleware": "^7.0.0",
     "colors": "^1.1.2",
+    "domready": "^1.0.8",
     "eventemitter2": "^1.0.5",
     "express": "^4.14.0",
     "express-flash": "0.0.2",

@@ -1,2 +1,212 @@
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #393a36;
+  background: #f8f6f1;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  color: #b7ab9a;
+}
+
+a, a:hover, a:visited, a:active {
+  color: #5ccc5c;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.title h1 {
+  margin-bottom: 0.5rem;
+}
+
+.title h2 {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+.tool-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: white;
+}
+
+.tool-container .row {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: left;
+  border-top: solid 1px #f5ede0;
+}
+
+.tool-container .active-library, .tool-container input[type='text'], .tool-container textarea {
+  width: 100%;
+  padding: 1rem;
+  border: solid 2px #e3dbce;
+  border-radius: 3px;
+  background: #fbf9f3;
+}
+
+.tool-container .active-library {
+  cursor: pointer;
+}
+
+.tool-container .available-libraries {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.tool-container .available-libraries li {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: solid 1px #f5ede0;
+}
+
+.tool-container .available-libraries li:hover {
+  background: rgba(251, 249, 243, 0.5);
+}
+
+.tool-container .close-list {
+  font-size: 2rem;
+  position: absolute;
+  z-index: 3;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  opacity: 0.75;
+  color: #95836a;
+}
+
+.tool-container .close-list:hover {
+  opacity: 1;
+}
+
+.tool-container textarea {
+  min-height: 20rem;
+}
+
+.tool-container .input-groups .input-group {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tool-container .input-groups .input-group:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.tool-container .input-groups .input-group span {
+  font-size: 2rem;
+  display: inline-block;
+  float: left;
+  height: 100%;
+  margin: 0 1rem;
+  padding-top: 0.3rem;
+}
+
+.tool-container .input-groups .input-group i {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  cursor: pointer;
+  opacity: 0.75;
+  color: #95836a;
+}
+
+.tool-container .input-groups .input-group i:hover {
+  opacity: 1;
+}
+
+.tool-container .input-groups .input-group input {
+  float: left;
+  width: 43%;
+}
+
+.tool-container .method-list {
+  padding: 0;
+  text-align: center;
+}
+
+.tool-container .method-list li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: solid 2px transparent;
+  border-radius: 2rem;
+}
+
+.tool-container .method-list li:hover {
+  border: solid 2px #e3dbce;
+  background: #fbf9f3;
+}
+
+.tool-container .method-list li.active {
+  color: white;
+  background: #5ccc5c;
+}
+
+.tool-container button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  background: #5ccc5c;
+}
+
+.tool-container button.add-input-group {
+  color: #393a36;
+  border: solid 2px #e3dbce;
+  background: #fbf9f3;
+}
+
+.note {
+  margin-top: 1rem;
+  color: #b7ab9a;
+}
 
 /*# sourceMappingURL=main.css.map */

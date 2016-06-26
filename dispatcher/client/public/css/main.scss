@@ -1,0 +1,219 @@
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  color: hsla(75, 4%, 22%, 1.00);
+  background: hsla(38, 36%, 96%, 1.00);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+
+  text-align: center;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  color: hsla(35, 17%, 66%, 1.00);
+}
+a, a:hover, a:visited, a:active {
+  color: hsla(120, 52%, 58%, 1.00);
+}
+
+ul {
+  list-style-type: none;
+}
+.title {
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+}
+.tool-container {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  background: white;
+  .row {
+    display: block;
+
+    width: 100%;
+    padding: 1rem 2rem;
+
+    text-align: left;
+
+    border-top: solid 1px hsla(38, 52%, 92%, 1.00);
+  }
+  .active-library, input[type='text'], textarea {
+    width: 100%;
+    padding: 1rem;
+
+    border: solid 2px hsla(37, 27%, 85%, 1.00);
+    border-radius: 3px;
+    background: hsla(43, 54%, 97%, 1.00);
+  }
+  .active-library {
+    cursor: pointer;
+  }
+  .available-libraries {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    overflow-y: auto;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: hsla(0,100%,100%,0.95);
+    li {
+      display: block;
+
+      width: 100%;
+      padding: 2rem;
+
+      cursor: pointer;
+      text-align: left;
+
+      border-bottom: solid 1px hsla(38, 52%, 92%, 1.00);
+      &:hover {
+        background: hsla(43, 54%, 97%, 0.5);
+      }
+    }
+  }
+  .close-list {
+    font-size: 2rem;
+
+    position: absolute;
+    z-index: 3;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    cursor: pointer;
+
+    opacity: 0.75;
+    color: hsla(35, 17%, 50%, 1.00);
+    &:hover {
+      opacity: 1;
+    }
+  }
+  textarea {
+    min-height: 20rem;
+  }
+  .input-groups {
+    .input-group {
+      margin-top: 1rem;
+
+      text-align: center;
+      &:after {
+        display: table;
+        clear: both;
+
+        content: '';
+      }
+      span {
+        font-size: 2rem;
+
+        display: inline-block;
+        float: left;
+
+        height: 100%;
+        margin: 0 1rem;
+        padding-top: 0.3rem;
+      }
+      i {
+        font-size: 1.5rem;
+
+        padding-top: 1rem;
+
+        cursor: pointer;
+
+        opacity: 0.75;
+        color: hsla(35, 17%, 50%, 1.00);
+        &:hover {
+          opacity: 1;
+        }
+      }
+      input {
+        float: left;
+
+        width: 43%;
+      }
+    }
+  }
+  .method-list {
+    padding: 0;
+
+    text-align: center;
+    li {
+      display: inline-block;
+
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+
+      cursor: pointer;
+
+      border: solid 2px transparent;
+      border-radius: 2rem;
+      &:hover {
+        border: solid 2px hsla(37, 27%, 85%, 1.00);
+        background: hsla(43, 54%, 97%, 1.00);
+      }
+      &.active {
+        color: white;
+        background: hsla(120, 52%, 58%, 1.00);
+      }
+    }
+  }
+  button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    background: hsla(120, 52%, 58%, 1.00);
+    &.add-input-group {
+      color: hsla(75, 4%, 22%, 1.00);
+      border: solid 2px hsla(37, 27%, 85%, 1.00);
+      background: hsla(43, 54%, 97%, 1.00);
+    }
+  }
+}
+.note {
+  margin-top: 1rem;
+
+  color: hsla(35, 17%, 66%, 1.00);
+}

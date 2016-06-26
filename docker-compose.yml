@@ -18,13 +18,13 @@ agent-ruby:
   build: agents/ruby
   ports:
    - "8005:8005"
-dispatcher:
-  build: dispatcher
-  ports:
-   - "8000:8000"
-  links:
-    - agent-golang:golang
-    - agent-nodejs:nodejs
-    - agent-php:php
-    - agent-python:python
-    - agent-ruby:ruby
+# dispatcher:
+#   build: dispatcher
+#   ports:
+#    - "8000:8000"
+#   links:
+#     - agent-golang:golang
+#     - agent-nodejs:nodejs
+#     - agent-php:php
+#     - agent-python:python
+#     - agent-ruby:ruby
