@@ -5,6 +5,4 @@
 - Basic Docker server setup
 
 ### Commits
-- [[`0c2a3f886f (commit-hash)`]((link-to-commit-hash))] - **(scope, page, or file):**  (description) ((author))
-- [[`9178103673 (commit-hash)`]((link-to-commit-hash))] - **(scope, page, or file):**  (description) ((author))
-- [[`8459f4f703 (commit-hash)`]((link-to-commit-hash))] - **(scope, page, or file):**  (description) ((author))
+- [[`377f28867c`](https://github.com/therebelrobot/segment-dispatcher/commit/377f28867c6ea19c3f926cd972c5ae5a7f720a4e)] - **init:**  docs + basic docker servers (Trent Oswald)
