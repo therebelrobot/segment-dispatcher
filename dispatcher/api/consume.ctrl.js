@@ -24,7 +24,7 @@ var consume = {
       'http://localhost',
       types[req.body.library]
       ].join(':'), {form: {writeKey:req.body.writeKey,data:data}},function(err, results){
-        console.log(results)
+        console.log(results.body)
         res.send(results.body)
       })
   }
