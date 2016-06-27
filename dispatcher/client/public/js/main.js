@@ -69,7 +69,7 @@ var model = {
   ]),
   account: {
     project: m.prop('segment/testing'),
-    writeKey: m.prop('0mWwzvSUk0luGkbtc8Unv6bTfla6c5YI')
+    writeKey: m.prop('')
   },
   sendingData: m.prop(false),
   notifications: m.prop([]),
