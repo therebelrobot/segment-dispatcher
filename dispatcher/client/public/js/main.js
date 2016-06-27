@@ -15,43 +15,47 @@ var model = {
       type: 'golang',
       name: 'Go',
       port: 8001,
-      useForm: false
+      status: '[BETA]',
+
     },
     {
       type: 'nodejs',
       name: 'Node.js',
       port: 8002,
-      useForm: false
+      status: ''
     },
     {
       type: 'php',
       name: 'PHP',
       port: 8003,
-      useForm: false
+      status: '[Unfinished]'
     },
     {
       type: 'python',
       name: 'Python',
       port: 8004,
-      useForm: false
+      status: '[Unfinished]'
     },
     {
       type: 'ruby',
       name: 'Ruby',
       port: 8005,
-      useForm: false
+      status: '[Unfinished]'
     },
     {
       type: 'http',
-      name: 'HTTP'
+      name: 'HTTP',
+      status: '[Unfinished]'
     },
     {
       type: 'clientjs',
-      name: 'Client-side Javascript'
+      name: 'Client-side Javascript',
+      status: '[Unfinished]'
     },
     {
       type: 'pixel',
-      name: 'Pixel tracking'
+      name: 'Pixel tracking',
+      status: '[Unfinished]'
     }
   ]),
   activeMethod: m.prop('raw'),
@@ -217,7 +221,9 @@ var ctrl = {
                 }
               }
             }, [
-              lib.name
+              lib.name,
+              ' ',
+              lib.status
             ])
           }))
         ]),
@@ -706,11 +712,7 @@ var ctrl = {
         ])
       ]),
       m('.note', [
-        'Calls made from this simulator will show up in the ',
-        m('a', {
-          href: '#'
-        }, model.account.project()),
-        ' project.'
+        '[Beta] indicates the agent sends data, but not custom. [Unfinished] indicates server running, but not connected to Segment.'
       ])
     ])
   }

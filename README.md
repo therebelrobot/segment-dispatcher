@@ -37,22 +37,24 @@ A node.js tool / collection of simple docker api servers that dispatch basic dat
 
 #### Client
 
+As located at http://docker.therebelrobot.com:8000. Available agents are listed in the dropdowns. 
+
 #### Dispatcher API
 
+**Endpoints: **
+
+- `POST` `/` - Accepts JSON input, must include `writeKey' (valid Segement key), `library` (valid agent library), and `data` (valid JSON, which in turn has `type`, a valid Segment method.)
+
 #### Agents
-##### Golang
 ##### Node.js
-##### PHP
-##### Python
-##### Ruby
 
-### Troubleshooting
+Status: Completed. Can send custom data to any Segment account.
 
-This section is a work in progress. Troubleshooting issues and solutions will be posted here as they are raised.
+##### Golang
 
-### FAQs
+Status: Completed. Can send data to any Segment account, but only of a specific type.
 
-This section is a work in progress. FAQs will be posted here as they are raised.
+*** PHP, Python, and Ruby servers are running, but not connected to Segment***
 
 ### Team
 

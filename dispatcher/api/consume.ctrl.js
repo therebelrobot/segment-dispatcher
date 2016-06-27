@@ -21,7 +21,7 @@ var consume = {
       return res.sendStatus(400).send({message:e.toString()})
     }
     request.post([
-      'http://localhost',
+      'http://'+req.body.library,
       types[req.body.library]
       ].join(':'), {form: {writeKey:req.body.writeKey,data:data}},function(err, results){
         console.log(results.body)

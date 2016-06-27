@@ -1,10 +1,7 @@
 package main
 
 import (
-    "fmt"
-    // "strings"
     "net/http"
-    "encoding/json"
     "github.com/labstack/echo"
     "github.com/labstack/echo/engine/standard"
     "github.com/segmentio/analytics-go"
@@ -15,13 +12,8 @@ func main() {
   e.POST("/", func(c echo.Context) error {
     writeKey := c.FormValue("writeKey")
     client := analytics.New(writeKey)
-    sentJson := c.FormValue("data")
-    var f interface{}
-    err := json.Unmarshal(sentJson, &f)
-    // json = j.Unmarshal(json)
-    // type := strings.Title(json.type)
     client.Identify(&analytics.Identify{
-      UserId: sentJson.userId,
+      UserId: "12345",
       Traits: map[string]interface{}{
         "name": "Michael Bolton",
         "email": "mbolton@initech.com",
@@ -29,8 +21,7 @@ func main() {
         "friends": 42,
       },
     })
-    fmt.Println(sentJson)
-    return c.JSON(http.StatusOK, sentJson)
+    return c.String(http.StatusOK, "A-ok!")
   })
   e.Run(standard.New(":8001"))
 }
