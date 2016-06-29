@@ -15,15 +15,19 @@ var consume = {
       var data = JSON.parse(req.body.data)
       if(!req.body.writeKey || req.body.writeKey === '') throw new Error('No writeKey provided.')
       if(!req.body.library || req.body.library === '') throw new Error('No library provided.')
-      if(!data.type || data.type === '') throw new Error('No Method provided.')
+      if(!data.type || data.type === '') throw new Error('No method type provided.')
     } catch(e){
-      console.error(e)
-      return res.sendStatus(400).send({message:e.toString()})
+      console.error(e.message)
+      return res.status(400).send({message:e.message})
     }
     request.post([
       'http://'+req.body.library,
+      // 'http://localhost',
       types[req.body.library]
       ].join(':'), {form: {writeKey:req.body.writeKey,data:data}},function(err, results){
+        if(err){
+          return res.status(500).send({message:err.toString()})
+        }
         console.log(results.body)
         res.send(results.body)
       })

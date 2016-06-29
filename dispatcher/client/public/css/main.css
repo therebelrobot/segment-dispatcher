@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 * {
@@ -202,6 +202,39 @@ ul {
   color: #393a36;
   border: solid 2px #e3dbce;
   background: #fbf9f3;
+}
+
+.notification-alert {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border: solid 2px #e3dbce;
+  border-radius: 3px;
+  background: #fbf9f4;
+}
+
+.notification-alert[data-type='info'] {
+  color: #317190;
+  border-color: #bce8f1;
+  background-color: #d9edf7;
+}
+
+.notification-alert[data-type='success'] {
+  color: #3c773d;
+  border-color: #d7eac8;
+  background: #deefd7;
+}
+
+.notification-alert[data-type='warn'] {
+  color: #8b6e3c;
+  border-color: #faebcc;
+  background-color: #fcf8e3;
+}
+
+.notification-alert[data-type='error'] {
+  color: #a94342;
+  border-color: #ebccd1;
+  background-color: #f2dede;
 }
 
 .note {
