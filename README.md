@@ -1,6 +1,6 @@
 # Segment Agent Dispatcher
 
-[![](https://img.shields.io/badge/TrustOSS-0.1.0-green.svg)](http://trustoss.org)
+[![](https://img.shields.io/badge/TrustOSS-0.2.0-green.svg)](http://trustoss.org)
 
 A node.js tool / collection of simple docker api servers that dispatch basic data to Segment.io
 
