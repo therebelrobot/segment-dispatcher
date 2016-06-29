@@ -1,7 +1,7 @@
 {
  "trustoss": "0.1.0",
  "name": "Segment Dispatcher",
- "version": "0.1.0",
+ "version": "0.2.0",
  "repository": "https://github.com/therebelrobot/segment-dispatcher.git",
  "status": "alpha",
  "contact": "Trent Oswald (@therebelrobot) <trentoswald@therebelrobot.com>",
